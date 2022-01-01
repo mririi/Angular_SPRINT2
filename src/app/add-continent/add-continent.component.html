@@ -1,0 +1,24 @@
+
+<div class="container mt-5">
+
+  <div>
+  <h2 class="mt-4 ml-3">Ajouter un Continent</h2>
+  </div>
+  <form >
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Name Continent</label>
+    <input type="text"[(ngModel)]="newContinent.name" name="name" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+    <label >Number of Countries</label>
+    <input type="text" [(ngModel)]="newContinent.nbCountries" name="nbCountries" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label >Surface</label>
+      <input type="text" [(ngModel)]="newContinent.surface" name="surface" class="form-control">
+      </div>
+    <div class="mt-4 ml-3">
+    <button type="submit" (click)="addContinent()" class="btn btn-success">Ajouter</button>
+    </div>
+    </form>
+    </div>

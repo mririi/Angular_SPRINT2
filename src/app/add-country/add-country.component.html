@@ -1,0 +1,31 @@
+
+<div class="container mt-5">
+
+  <div>
+  <h2 class="mt-4 ml-3">Ajouter un Country</h2>
+  </div>
+  <form >
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Name Country</label>
+    <input type="text"[(ngModel)]="newCountry.name" name="name" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+    <label >Number of states</label>
+    <input type="text" [(ngModel)]="newCountry.nbStates" name="nbStates" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+    <label >Founded In</label>
+    <input type="date" [(ngModel)]="newCountry.foundedIn" name="foundedIn" class="form-control">
+    </div>
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>Continent </label>
+        <select class="form-control" id="idcont" [(ngModel)]="newCountry.continent" [ngModelOptions]="{standalone: true}">
+                <option>--Select Continent--</option>
+                <option  *ngFor="let cont of continentList" [ngValue]="cont">{{cont.name}}</option>
+            </select>
+        </div>
+    <div class="mt-4 ml-3">
+    <button type="submit" (click)="addCountry()" class="btn btn-success">Ajouter</button>
+    </div>
+    </form>
+    </div>
